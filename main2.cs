@@ -27,7 +27,7 @@ namespace ConsoleApp1
       this.nNum1 = nNum1;
       this.nNum2 = nNum2;
     }
-   ~Test()
+    ~Test()
     {
       Console.WriteLine("{0} 소멸!", sName);
     }
@@ -46,7 +46,6 @@ namespace ConsoleApp1
       newInstance.nNum2 = this.nNum2;
       
       return newInstance;
-    }
     }
       
     static void Main(string[] args)
@@ -72,6 +71,7 @@ namespace ConsoleApp1
       Test testC = testA;
       testC.nNum1 = -10;
       testC.nNum2 = -30;
+      testC.sName = "C";
       testA.Show();       //testC의 필드에 값을 할당했지만 testA의 값이 변경되었음
       testC.Show();
       Console.WriteLine();
